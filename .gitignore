@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Results folders
+results/input/*
+results/output/*
+results/changes/*
+
+# Keep folder structure
+!results/input/.gitkeep
+!results/output/.gitkeep
+!results/changes/.gitkeep
