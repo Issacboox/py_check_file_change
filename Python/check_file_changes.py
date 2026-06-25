@@ -23,14 +23,6 @@ def row_has_data(row):
 
 
 def has_added_data(excel_path: Path) -> bool:
-    """
-    Check whether Excel file has added data.
-
-    Logic:
-    - Ignore first 5 rows.
-    - After row 5, skip rows that contain 'ตัวอย่าง'.
-    - If any row after that has real data, return True.
-    """
     wb = None
 
     try:
@@ -64,12 +56,6 @@ def has_added_data(excel_path: Path) -> bool:
 
 
 def copy_excel_files(source_folder: Path, output_folder: Path):
-    """
-    Copy matching Excel files from input folder to output folder.
-
-    Output structure:
-    results/output/xxxx/[xxxx]filename.xlsx
-    """
     copied_files = []
 
     if not source_folder.exists():
